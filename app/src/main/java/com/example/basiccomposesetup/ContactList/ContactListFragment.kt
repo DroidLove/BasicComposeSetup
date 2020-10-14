@@ -31,7 +31,7 @@ import com.example.basiccomposesetup.ui.BasicComposeSetupTheme
  */
 class ContactListFragment : Fragment() {
 
-    private val viewModel: ContactListViewModel by viewModels { ContactListViewModelFactory() }
+//    private val viewModel: ContactListViewModel by viewModels { ContactListViewModelFactory() }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,7 +42,7 @@ class ContactListFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 BasicComposeSetupTheme {
-                    ContactListScreen(viewModel)
+                    ContactListScreen()
                 }
             }
         }

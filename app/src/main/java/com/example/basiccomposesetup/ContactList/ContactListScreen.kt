@@ -14,9 +14,21 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.viewModel
+
+//@Composable
+//fun ContactListScreen(viewModel: ContactListViewModel) {
+//    val apiResponse: ArrayList<String>? by viewModel.apiResponse.observeAsState()
+//
+//    Surface(color = MaterialTheme.colors.background) {
+//        viewModel.getContactListing()
+//        handlingUI(apiResponse)
+//    }
+//}
 
 @Composable
-fun ContactListScreen(viewModel: ContactListViewModel) {
+fun ContactListScreen() {
+    val viewModel = viewModel<ContactListViewModel>()
     val apiResponse: ArrayList<String>? by viewModel.apiResponse.observeAsState()
 
     Surface(color = MaterialTheme.colors.background) {
